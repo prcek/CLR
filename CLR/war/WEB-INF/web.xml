@@ -54,7 +54,7 @@
   
   <!-- Default page to serve -->
   <welcome-file-list>
-    <welcome-file>CLR.html</welcome-file>
+    <welcome-file>clr.html</welcome-file>
   </welcome-file-list>
 
 
