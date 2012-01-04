@@ -5,20 +5,58 @@
          version="2.5"
          xmlns="http://java.sun.com/xml/ns/javaee">
 
+  <display-name>CLR Komerce {LOCAL NAME}</display-name>
+
   <!-- Servlets -->
+  
   <servlet>
-    <servlet-name>greetServlet</servlet-name>
-    <servlet-class>com.prcek.clr.server.GreetingServiceImpl</servlet-class>
+    <servlet-name>CLR</servlet-name>
+    <servlet-class>com.prcek.clr.server.Remote</servlet-class>
+    
+    
+  <init-param>
+       <param-name>debug</param-name>
+       <param-value>true</param-value>
+  </init-param>
+ 
+  <init-param>
+       <param-name>db_url</param-name>
+       <param-value>jdbc:mysql://127.0.0.1/clr_devel?useUnicode=yes&amp;characterEncoding=UTF-8&amp;user=clr_devel&amp;password=clr_devel</param-value>
+  </init-param>
+
+  <init-param>
+       <param-name>system_name</param-name>
+       <param-value>KOMERCE - {LOCAL NAME}</param-value>
+  </init-param>
+
+  <init-param>
+       <param-name>app_version</param-name>
+       <param-value>1.0.4</param-value>
+  </init-param>
+  
+  <init-param>
+       <param-name>help_url</param-name>
+       <param-value>{HELP URL}</param-value>
+  </init-param>
+
+  <init-param>
+       <param-name>print_url</param-name>
+       <param-value>clr/remote</param-value>
+  </init-param>
+    
+    
   </servlet>
   
   <servlet-mapping>
-    <servlet-name>greetServlet</servlet-name>
-    <url-pattern>/clr/greet</url-pattern>
+    <servlet-name>CLR</servlet-name>
+    <url-pattern>/clr/remote</url-pattern>
   </servlet-mapping>
   
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>CLR.html</welcome-file>
   </welcome-file-list>
+
+
 
 </web-app>
