@@ -15,7 +15,7 @@
   <inherits name='com.extjs.gxt.ui.GXT'/>
   
   <!-- Specify the app entry point class.                         -->
-  <entry-point class='com.prcek.clr.client.CLR'/>
+  <entry-point class='com.prcek.clr.client.clr'/>
 
   <!-- Specify the paths for translatable code                    -->
   <source path='client'/>
