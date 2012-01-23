@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Build WAR" basedir=".">
+<target name="create">
+<war destfile="CLR_debug.war" webxml="war/WEB-INF/web.xml" update="true">
+<fileset dir="war">
+<exclude name="WEB-INF/web.xml"/>
+</fileset>
+</war>
+</target>
+</project>
